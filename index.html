@@ -1,10 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>Hello</title>
+<meta http-equiv="pragma" content="no-cache" />
+<meta charset="utf-8" http-equiv="pragma" content="no-cache"/>  
+<title>Drsky</title>
+<style>
+body{/* 网页背景样式 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    background-image: url(/imgaes/triangles-l-background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* backdrop-filter: blur(100px); */
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
+.title{/*标题栏内容样式*/
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items:center;
+    flex-wrap: nowrap;
+    border-radius: 20px 20px 0px 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.title a{
+    display: flex;
+    flex:1;
+}
+.href{/*标题栏标题样式*/
+    height: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    color:#fff;
+    animation-name: out;
+    animation-duration: 0.5s;
+    border-radius: 20px 20px 20px 20px;
+    border-bottom: none;
+}
+.href:hover{/*标题栏变化*/
+    color:#FFF;
+    background-color: rgba(30,30,30,1);
+    animation-name: out;
+    animation-duration: 0.5s;
+}
+@keyframes out{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes in{
+    0%{
+
+    }
+    100%{
+
+    }
+}
+#pale{
+    height: 418px;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 1);
+    border-radius: 20px 20px 20px 20px;
+    backdrop-filter: blur(40px);
+    position: relative;
+    top:-32px;
+}
+.name{/* 底栏名字样式 */
+    width: 100%;
+    height: 50px;
+    position: absolute;  bottom: 0;
+    color: #090;
+}
+.world_box{/*main内容框样式*/
+    border-radius: 20px;
+    width: 800px;
+    height: 418px;
+    background-color:rgba(0,10,15,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    /* position:absolute;  块元素居中，现已更换为flex布局
+    left:50%;  
+    top:50%;  
+    margin:-225px 0 0 -400px; */
+    color:#fff;
+    text-align: center;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    animation-name: example; 
+    animation-duration: 2s;
+    position: relative;
+}
+@keyframes example{
+    30%{
+        top: -100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+    }
+}
+.world_box #pale{
+    animation-name: close; 
+    animation-duration: 0.5s;
+}
+.world_box:hover #pale{
+    animation-name: open; 
+    animation-duration: 0.5s;
+    top:0px;
+}
+@keyframes open{
+    0%{top: -32px;}
+    100%{top: 0px;}
+}
+@keyframes close{
+    0%{top: 0px;}
+    100%{top: -32px;}
+} 
+</style>
+<script>
+function del_world_box(){
+    var obj=document.getElementById('world_box');
+    obj.parentNode.removeChild(obj);
+}
+function show_index(){
+    del_world_box();
+    var html="";
+    document.getElementById('world_box').innerHTML=html;
+}
+function show_for_me(){
+    del_world_box();
+    document.write('<div class="world_box" id="world_box"><br/>原谅我还没有想好要说啥</div>');
+}
+</script>
 </head>
-<body>
-  host
- </body>
- </html>
+<body class="bg-img" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="world_box" id="world_box" class="oc">
+    <div class="title" id="title">
+        <a href="">
+            <div class="href">首页</div>
+        </a>
+        <a href="https://mc.drsky.top:6">
+            <div class="href">我的世界</div>
+        </a>
+        <a href="log/">
+            <div class="href">日志</div>
+        </a>
+        <a onclick="alert('本功能正在开发中');">
+            <div class="href">工具</div>
+        </a>
+        <a onclick="del_world_box();">
+            <div class="href">关闭</div>
+        </a>
+    </div>
+    <div id="pale">
+        <br/>
+        <p sytle="p">你好啊，这里是光夜落星。虽然看上去是这个样子，算是有个正常的网页了，欢迎以后再来看我咯！</p>
+        <p>接下来将会带你去本页面的我的世界诶</p>
+        <p>
+            本站目前也有我的世界哇!不
+            <a href="https://mc.drsky.top:6">去看看</a>
+            嘛？
+        </p>
+        <p>好啦，我算是做了一个像样的网页，那我继续去敲代码咯，有事可以联系我</p>
+        <p>邮箱:microstar_mix@163.com && QQ号:3126086943 && 微信号:Kmicrostar</p>
+        <p>
+            <a href = "./old/tools/">进入工具站 </a>
+        </p>
+        <p>
+            <a href="./boke">我的动态(HTML)</a>
+        </p>
+        <div class="name">
+             <br/>来自于Drenchstar的编辑 by drsky.top
+        </div>
+    </div>
+</div>
+</body>
+</html>
