@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/light.css">
+    <script type="text/javascript" src="src/axios.min.js"></script>
+    <script type="text/javascript" src="src/lib.js"></script>
+    <script>
+        window.onload=login_status();
+        window.onload=hourtext();
+    </script>
+</head>
+
+<body>
+    <div class="pale" id="home">
+        <h2>康旭工时</h2>
+        <span id="hourtext"></span>
+        <input type="input" id="hour" placeholder="今日加班工时，默认为7.5（不加班）" class="input">
+        <input type="input" id="remark" placeholder="备注" class="input">
+        <input type="submit" value="提交" class="button" onclick="pushhour()">
+        <span id="username">username</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-color: rgba(245,245,245,1);
+}
+h2{
+    color: rgba(0, 130, 211);
+}
+.pale{
+    background-color: rgba(255,255,255,1);
+}
+.input{
+    border-bottom: 2px solid rgb(0, 130, 211);
+}
+.button{
+    color: rgba(0, 150,240,1);
+    background-color: rgb(199, 226, 240);
+}
